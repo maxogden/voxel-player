@@ -1,5 +1,5 @@
 var skin = require('minecraft-skin');
-
+var walk = require('voxel-walk');
 module.exports = function (game) {
     var mountPoint;
     var possessed;
@@ -18,6 +18,22 @@ module.exports = function (game) {
         physics.blocksCreation = true;
         
         game.control(physics);
+        game.controls.onForward= function(){
+            walk.render(physics.playerSkin);
+        };
+        game.controls.onBackward= function(){
+            walk.render(physics.playerSkin);
+        };
+        game.controls.onLeft= function(){
+            walk.render(physics.playerSkin);
+        };
+        game.controls.onRight= function(){
+            walk.render(physics.playerSkin);
+        };
+        game.controls.onJump= function(){
+            walk.render(physics.playerSkin);
+        };
+        walk.startWalking();
         
         physics.move = function (x, y, z) {
             var xyz = parseXYZ(x, y, z);
