@@ -4,7 +4,8 @@
     "description": "create a skinnable player with physics enabled",
     "main": "index.js",
     "dependencies": {
-        "minecraft-skin": "~0.0.3"
+        "minecraft-skin": "~0.0.3",
+        "voxel-walk": "git://github.com/flyswatter/voxel-walk.git"
     },
     "devDependencies": {
         "voxel": "~0.1.3",
